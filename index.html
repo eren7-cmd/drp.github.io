@@ -1,134 +1,128 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="DRP هو اختصار لعبارة غيّر مكان الراوتر. اكتشف المعنى الكامل لـ DRP.">
-  <meta name="keywords" content="drp, معنى drp, اختصار drp, غيّر مكان الراوتر, تحسين الواي فاي">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>معنى DRP</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notification Réseau</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-      padding: 30px;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
     }
-    .container {
-      max-width: 700px;
-      margin: 80px auto 30px;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-      line-height: 1.8;
-    }
-    img {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .note-title {
-      color: #e67e22;
-      font-weight: bold;
-      margin-top: 40px;
-    }
+
     .lang-switcher {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      z-index: 1000;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
     }
-    .lang-switcher select {
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 14px;
+
+    select {
+      padding: 5px 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .wifi-image {
+      width: 180px;
+      margin-top: 4rem;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .important-note {
+      background-color: #fff8e1;
+      color: #795548;
+      border-left: 5px solid #ff9800;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 1rem;
+      max-width: 700px;
+      border-radius: 8px;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- زر تغيير اللغة -->
   <div class="lang-switcher">
-    <select id="langSelect" onchange="changeLanguage()">
-      <option value="ar">🇸🇦 العربية</option>
-      <option value="en">🇬🇧 English</option>
-      <option value="fr">🇫🇷 Français</option>
-      <option value="jp">🇯🇵 日本語</option>
+    <select id="langSelect">
+      <option value="fr">Français</option>
+      <option value="ar">العربية</option>
+      <option value="en">English</option>
+      <option value="jp">日本語</option>
     </select>
   </div>
 
-  <div class="container" id="content">
-    <!-- المحتوى سيتغير حسب اللغة -->
+  <img class="wifi-image" src="https://i.imgur.com/nSgTZTn.png" alt="No WiFi Signal" />
+
+  <h1 id="title">Connexion Réseau Faible ou Absente</h1>
+  <p id="desc">
+    Ce raccourci indique une connexion Wi-Fi instable ou interrompue. Veuillez vérifier votre routeur ou essayer de le redémarrer.
+  </p>
+
+  <div class="important-note" id="note">
+    🔔 <strong>Remarque importante :</strong> Si le raccourci apparaît à côté du nom de votre routeur, cela signifie que vous devez changer son emplacement.
+    Attendez environ 30 à 60 minutes pour que l'icône disparaisse. Si elle ne disparaît pas, déplacez le routeur à un autre endroit et réessayez.
   </div>
 
   <script>
     const translations = {
+      fr: {
+        title: "Connexion Réseau Faible ou Absente",
+        desc: "Ce raccourci indique une connexion Wi-Fi instable ou interrompue. Veuillez vérifier votre routeur ou essayer de le redémarrer.",
+        note: "🔔 <strong>Remarque importante :</strong> Si le raccourci apparaît à côté du nom de votre routeur, cela signifie que vous devez changer son emplacement. Attendez environ 30 à 60 minutes pour que l'icône disparaisse. Si elle ne disparaît pas, déplacez le routeur à un autre endroit et réessayez."
+      },
       ar: {
-        title: "ما معنى DRP؟",
-        line1: 'DRP هو اختصار لعبارة "غيّر مكان الراوتر".',
-        line2: 'عند الحديث عن الإنترنت، DRP تعني ببساطة: تغيير موقع الراوتر للحصول على تغطية أفضل.',
-        line3: 'لذلك عندما نقول DRP، فإننا نقصد: "غيّر مكان الراوتر".',
-        line4: 'DRP = غيّر مكان الراوتر ✅',
-        line5: 'إذا كنت تواجه مشاكل في الواي فاي، فالحل الأول هو تغيير مكان الراوتر إلى مكان مفتوح ومرتفع.',
-        noteTitle: '🔸 ملاحظة مهمة:',
-        note: 'إذا ظهرت عبارة DRP بجانب اسم شبكة الواي فاي الخاصة بك، فهذا يعني أن مكان الراوتر غير مناسب. يُنصح بنقله إلى موقع مفتوح ومرتفع، ثم الانتظار بين 30 دقيقة إلى ساعة حتى تختفي العبارة. إذا لم تختفِ بعد مرور ساعة، جرّب نقل الراوتر إلى موقع مختلف تمامًا للحصول على أفضل إشارة ممكنة.'
+        title: "اتصال واي فاي ضعيف أو غير موجود",
+        desc: "يشير هذا الاختصار إلى أن الاتصال بالواي فاي غير مستقر أو مقطوع. يرجى التحقق من الراوتر أو إعادة تشغيله.",
+        note: "🔔 <strong>ملاحظة مهمة:</strong> إذا ظهر هذا الاختصار بجانب اسم الراوتر، فهذا يعني أنك بحاجة لتغيير مكانه. انتظر من 30 إلى 60 دقيقة حتى يختفي. إذا لم يختفِ، غيّر موقع الراوتر وجرب مرة أخرى."
       },
       en: {
-        title: "What does DRP mean?",
-        line1: 'DRP stands for "Change the Router Position".',
-        line2: 'When talking about internet connection, DRP simply means changing your router’s location to improve coverage.',
-        line3: 'So when we say DRP, we mean: "Change the Router Position".',
-        line4: 'DRP = Change Router Position ✅',
-        line5: 'If you’re facing Wi-Fi issues, the first step is to move your router to an open and elevated area.',
-        noteTitle: '🔸 Important Note:',
-        note: 'If you see the label "DRP" next to your Wi-Fi network name, it means the router is not in an ideal position. Move it to an open location and wait 30 minutes to 1 hour. If the label remains, try moving it to a completely different spot for better signal.'
-      },
-      fr: {
-        title: "Que signifie DRP ?",
-        line1: 'DRP est l’abréviation de "Déplacez le Routeur".',
-        line2: 'En parlant d’internet, DRP signifie simplement changer l’emplacement du routeur pour une meilleure couverture.',
-        line3: 'Donc, DRP signifie : "Déplacez le Routeur".',
-        line4: 'DRP = Déplacez le Routeur ✅',
-        line5: 'Si vous avez des problèmes de Wi-Fi, déplacez le routeur vers un endroit ouvert et élevé.',
-        noteTitle: '🔸 Remarque importante :',
-        note: 'Si "DRP" apparaît à côté du nom de votre réseau Wi-Fi, cela signifie que le routeur n’est pas bien placé. Déplacez-le et attendez entre 30 minutes et 1 heure. Si le message persiste, essayez de le déplacer dans un autre endroit complètement différent.'
+        title: "Weak or No Wi-Fi Connection",
+        desc: "This shortcut indicates an unstable or lost Wi-Fi connection. Please check your router or try restarting it.",
+        note: "🔔 <strong>Important Note:</strong> If this shortcut appears next to your router's name, you need to change its location. Wait around 30–60 minutes for the icon to disappear. If it doesn’t, move the router elsewhere and try again."
       },
       jp: {
-        title: "DRPの意味は？",
-        line1: 'DRPは「ルーターの位置を変更する」の略です。',
-        line2: 'インターネット接続について話すとき、DRPはルーターの場所を変更して電波を改善することを意味します。',
-        line3: 'つまり、DRPとは「ルーターの位置を変更する」ということです。',
-        line4: 'DRP = ルーターの位置を変更 ✅',
-        line5: 'Wi-Fiの問題がある場合、最初のステップはルーターを開けた高い場所に移動することです。',
-        noteTitle: '🔸 重要な注意:',
-        note: 'Wi-Fiネットワーク名の横に「DRP」と表示された場合、ルーターの位置が不適切です。ルーターを開放的な場所に移動し、30分から1時間待ってください。それでも消えない場合は、別の場所に再配置してみてください。'
+        title: "Wi-Fi 接続が弱い、またはありません",
+        desc: "このショートカットは Wi-Fi 接続が不安定または切断されていることを示します。ルーターを確認するか再起動してください。",
+        note: "🔔 <strong>重要な注意:</strong> このショートカットがルーター名の横に表示されている場合、ルーターの位置を変更する必要があります。アイコンが消えるまで 30～60 分ほどお待ちください。それでも消えない場合は、ルーターを別の場所に移動して再試行してください。"
       }
     };
 
-    function changeLanguage() {
-      const lang = document.getElementById("langSelect").value;
-      const t = translations[lang];
-      document.getElementById("content").innerHTML = `
-        <img src="https://i.imgur.com/3z9QF41.png" alt="Weak WiFi Icon">
-        <h1>${t.title}</h1>
-        <p>${t.line1}</p>
-        <p>${t.line2}</p>
-        <p>${t.line3}</p>
-        <p>${t.line4}</p>
-        <p>${t.line5}</p>
-        <hr>
-        <p class="note-title">${t.noteTitle}</p>
-        <p>${t.note}</p>
-      `;
-      document.documentElement.lang = lang === 'jp' ? 'ja' : lang;
-      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-    }
+    const langSelect = document.getElementById("langSelect");
+    const title = document.getElementById("title");
+    const desc = document.getElementById("desc");
+    const note = document.getElementById("note");
 
-    // اختر اللغة الافتراضية عند بداية الصفحة
-    changeLanguage();
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      title.innerHTML = translations[lang].title;
+      desc.innerHTML = translations[lang].desc;
+      note.innerHTML = translations[lang].note;
+    });
+
+    // Set default language to French
+    langSelect.value = "fr";
   </script>
 </body>
 </html>
