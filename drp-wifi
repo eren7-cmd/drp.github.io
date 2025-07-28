@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="DRP signifie Déplacez le Routeur. Découvrez ce que veut dire DRP pour améliorer votre Wi-Fi.">
+  <meta name="keywords" content="DRP, signification DRP, que veut dire DRP, changer position routeur, améliorer wifi, wifi lent, solution wifi, DRP wifi">
+  <meta name="robots" content="index, follow">
+  <title>Signification de DRP - Améliorer le Wi-Fi</title>
+
+  <!-- ✅ Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Signification de DRP",
+    "description": "DRP signifie déplacer le routeur pour améliorer le signal Wi-Fi. Apprenez ce que signifie DRP et comment résoudre les problèmes de Wi-Fi.",
+    "inLanguage": "fr",
+    "url": "https://example.com/drp"
+  }
+  </script>
+
+  <!-- ✅ Style -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      padding: 30px;
+      margin: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 80px auto 30px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      line-height: 1.8;
+    }
+    .title-logo {
+      font-size: 42px;
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .note-title {
+      color: #e67e22;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+    .lang-switcher {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .lang-switcher select {
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔘 Language Switcher -->
+  <div class="lang-switcher">
+    <select id="langSelect" onchange="changeLanguage()">
+      <option value="ar">🇸🇦 العربية</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="fr" selected>🇫🇷 Français</option>
+      <option value="jp">🇯🇵 日本語</option>
+    </select>
+  </div>
+
+  <div class="container" id="content">
+    <!-- المحتوى الديناميكي -->
+  </div>
+
+  <!-- ✅ JavaScript: تغيير اللغة وتحديث meta title/description -->
+  <script>
+    const translations = {
+      ar: {
+        title: "ما معنى DRP؟",
+        line1: 'DRP هو اختصار لعبارة "غيّر مكان الراوتر".',
+        line2: 'عند الحديث عن الإنترنت، DRP تعني ببساطة: تغيير موقع الراوتر للحصول على تغطية أفضل.',
+        line3: 'بمعنى آخر، DRP = تغيير مكان الواي فاي.',
+        line4: 'DRP = غيّر مكان الراوتر ✅',
+        line5: 'إذا كنت تواجه مشاكل في الواي فاي، جرب وضع الراوتر في مكان مفتوح ومرتفع.',
+        noteTitle: '🔸 ملاحظة مهمة:',
+        note: 'إذا ظهرت عبارة DRP بجانب اسم شبكة الواي فاي، فهذا يعني أن الراوتر في مكان غير مناسب. انقله لموقع أفضل وانتظر قليلاً.',
+        metaTitle: "معنى DRP - تغيير مكان الواي فاي لتحسين الإشارة",
+        metaDesc: "تعرف على معنى كلمة DRP وكيف أن تغيير مكان الراوتر يمكن أن يحسن تغطية Wi-Fi ويحل مشاكل الإنترنت."
+      },
+      en: {
+        title: "What does DRP mean?",
+        line1: 'DRP stands for "Change the Router Position".',
+        line2: 'It simply means relocating your router to improve Wi-Fi coverage.',
+        line3: 'In other words: DRP = Move the Wi-Fi router.',
+        line4: 'DRP = Change Router Position ✅',
+        line5: 'If you have weak Wi-Fi, try placing the router in an open and high position.',
+        noteTitle: '🔸 Important Note:',
+        note: 'If you see DRP near your Wi-Fi name, it means the router’s position is not optimal. Move it and wait for better signal.',
+        metaTitle: "DRP Meaning - Improve Your Wi-Fi by Moving the Router",
+        metaDesc: "DRP means Change the Router Position. Learn how to fix your Wi-Fi signal by changing the router location."
+      },
+      fr: {
+        title: "Que signifie DRP ?",
+        line1: 'DRP est l’abréviation de "Déplacez le Routeur".',
+        line2: 'Cela signifie déplacer le routeur pour améliorer la couverture Wi-Fi.',
+        line3: 'Autrement dit : DRP = changer l’emplacement du Wi-Fi.',
+        line4: 'DRP = Déplacez le Routeur ✅',
+        line5: 'Si votre Wi-Fi est faible, essayez de placer le routeur dans un endroit ouvert et élevé.',
+        noteTitle: '🔸 Remarque importante :',
+        note: 'Si vous voyez DRP à côté du nom de votre Wi-Fi, cela signifie que la position du routeur n’est pas optimale. Déplacez-le.',
+        metaTitle: "Signification de DRP - Améliorez le Wi-Fi en déplaçant le routeur",
+        metaDesc: "DRP signifie déplacer le routeur pour une meilleure couverture Wi-Fi. Découvrez ce que veut dire DRP et comment améliorer votre internet."
+      },
+      jp: {
+        title: "DRPの意味は？",
+        line1: 'DRPは「ルーターの位置を変更する」の略です。',
+        line2: 'Wi-Fiのカバレッジを改善するためにルーターを移動することを意味します。',
+        line3: 'つまり、DRP = Wi-Fiルーターを移動する。',
+        line4: 'DRP = ルーターの位置を変更 ✅',
+        line5: 'Wi-Fiが弱い場合は、開けた高い場所にルーターを移動してください。',
+        noteTitle: '🔸 重要な注意:',
+        note: 'Wi-Fiの名前の横にDRPが表示されている場合、ルーターの位置が適切ではありません。移動しましょう。',
+        metaTitle: "DRPの意味 - Wi-Fiのためにルーターを移動する",
+        metaDesc: "DRPとは、ルーターの位置を変更してWi-Fiの信号を改善するという意味です。"
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById("langSelect").value;
+      const t = translations[lang];
+      document.getElementById("content").innerHTML = `
+        <div class="title-logo">Wi-Fi</div>
+        <h1>${t.title}</h1>
+        <p>${t.line1}</p>
+        <p>${t.line2}</p>
+        <p>${t.line3}</p>
+        <p>${t.line4}</p>
+        <p>${t.line5}</p>
+        <hr>
+        <p class="note-title">${t.noteTitle}</p>
+        <p>${t.note}</p>
+      `;
+
+      // تغيير title و meta description
+      document.title = t.metaTitle;
+      const metaDesc = document.querySelector("meta[name='description']");
+      if (metaDesc) {
+        metaDesc.setAttribute("content", t.metaDesc);
+      }
+
+      // لغة واتجاه الصفحة
+      document.documentElement.lang = lang === 'jp' ? 'ja' : lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    // تشغيل اللغة الافتراضية (فرنسية)
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("langSelect").value = "fr";
+      changeLanguage();
+    });
+  </script>
+</body>
+</html>
