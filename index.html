@@ -74,7 +74,7 @@
         line4: 'DRP = غيّر مكان الراوتر ✅',
         line5: 'إذا كنت تواجه مشاكل في الواي فاي، فالحل الأول هو تغيير مكان الراوتر إلى مكان مفتوح ومرتفع.',
         noteTitle: '🔸 ملاحظة مهمة:',
-        note: 'إذا ظهرت عبارة DRP بجانب اسم شبكة الواي فاي الخاصة بك، فهذا يعني أن مكان الراوتر غير مناسب. يُنصح بنقله إلى موقع مفتوح ومرتفع، ثم الانتظار بين 30 دقيقة إلى ساعة حتى تختفي العبارة ويعود الاتصال إلى حالته المثالية.'
+        note: 'إذا ظهرت عبارة DRP بجانب اسم شبكة الواي فاي الخاصة بك، فهذا يعني أن مكان الراوتر غير مناسب. يُنصح بنقله إلى موقع مفتوح ومرتفع، ثم الانتظار بين 30 دقيقة إلى ساعة حتى تختفي العبارة. إذا لم تختفِ بعد مرور ساعة، جرّب نقل الراوتر إلى موقع مختلف تمامًا للحصول على أفضل إشارة ممكنة.'
       },
       en: {
         title: "What does DRP mean?",
@@ -84,7 +84,7 @@
         line4: 'DRP = Change Router Position ✅',
         line5: 'If you’re facing Wi-Fi issues, the first step is to move your router to an open and elevated area.',
         noteTitle: '🔸 Important Note:',
-        note: 'If you see the label "DRP" next to your Wi-Fi network name, it means the router is not in an ideal position. It’s recommended to move it to an open location and wait 30 minutes to 1 hour for the label to disappear and performance to improve.'
+        note: 'If you see the label "DRP" next to your Wi-Fi network name, it means the router is not in an ideal position. Move it to an open location and wait 30 minutes to 1 hour. If the label remains, try moving it to a completely different spot for better signal.'
       },
       fr: {
         title: "Que signifie DRP ?",
@@ -94,7 +94,7 @@
         line4: 'DRP = Déplacez le Routeur ✅',
         line5: 'Si vous avez des problèmes de Wi-Fi, déplacez le routeur vers un endroit ouvert et élevé.',
         noteTitle: '🔸 Remarque importante :',
-        note: 'Si "DRP" apparaît à côté du nom de votre réseau Wi-Fi, cela signifie que le routeur n’est pas bien placé. Déplacez-le et attendez entre 30 minutes et 1 heure pour que le message disparaisse.'
+        note: 'Si "DRP" apparaît à côté du nom de votre réseau Wi-Fi, cela signifie que le routeur n’est pas bien placé. Déplacez-le et attendez entre 30 minutes et 1 heure. Si le message persiste, essayez de le déplacer dans un autre endroit complètement différent.'
       },
       jp: {
         title: "DRPの意味は？",
@@ -104,7 +104,7 @@
         line4: 'DRP = ルーターの位置を変更 ✅',
         line5: 'Wi-Fiの問題がある場合、最初のステップはルーターを開けた高い場所に移動することです。',
         noteTitle: '🔸 重要な注意:',
-        note: 'Wi-Fiネットワーク名の横に「DRP」と表示された場合、ルーターの位置が不適切です。ルーターを開放的な場所に移動し、30分から1時間待ってから改善を確認してください。'
+        note: 'Wi-Fiネットワーク名の横に「DRP」と表示された場合、ルーターの位置が不適切です。ルーターを開放的な場所に移動し、30分から1時間待ってください。それでも消えない場合は、別の場所に再配置してみてください。'
       }
     };
 
@@ -112,7 +112,7 @@
       const lang = document.getElementById("langSelect").value;
       const t = translations[lang];
       document.getElementById("content").innerHTML = `
-        <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png" alt="WiFi Icon">
+        <img src="https://i.imgur.com/3z9QF41.png" alt="Weak WiFi Icon">
         <h1>${t.title}</h1>
         <p>${t.line1}</p>
         <p>${t.line2}</p>
@@ -131,4 +131,4 @@
     changeLanguage();
   </script>
 </body>
-  </html>
+</html>
